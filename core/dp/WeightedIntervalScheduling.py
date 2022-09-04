@@ -67,9 +67,10 @@ def replaceTime(I):
         itens1 = str(itens[1])
         itens2 = str(itens[2])
         itens1 = itens1.replace("."," ")
-        itens1 = itens1[0:4]+'/'+itens1[4:6]+'/'+itens1[6:8]
+        itens1 = itens1[6:8]+'/'+itens1[4:6]+'/'+itens1[0:4]
         itens2 = itens2.replace("."," ")
-        itens2 = itens2[0:4]+'/'+itens2[4:6]+'/'+itens2[6:8]
+        itens2 = itens2[6:8]+'/'+itens2[4:6]+'/'+itens2[0:4]
+
         itens3 = itens[3]
         J.append((itens0,itens1,itens2,itens3))
 
