@@ -23,24 +23,78 @@
     </div>
     <div class="col mt-4">
        <div class="p-3 border bg-light">
-          <form method="POST" class="card">
-             <h5 class="card-title text-center">Weighted Interval Scheduling</h5>
-             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control form-control-sm" placeholder="Enter your email address">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-             </div>
-             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="email" class="form-control form-control-sm" placeholder="Enter your email address">
-             </div>
-             <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-             </div>
-             <button type="submit" class="btn btn-dark">Submit</button>
-          </form>
+         <form class="card application" method="POST" action="{% url 'wis_view' %}">
+            <h5 class="card-title text-center mb-3">Melhores Aplicações</h5>
+            {% csrf_token %}
+            <div id="formInsert">
+               <div id="formulario" class="dataForm d-flex flex align-items-center justify-content-center mt-2">
+                  <label for="inputTarefa">LCI/LCA: </label>
+                  <input type="text" class="form-control me-1 w-25 col-auto" name="nome0" id="inputTarefa"
+                     placeholder="LCI DI 1080" required />
+                  <label for="appt" class="text-nowrap bd-highlight">Data Inicial:</label>
+                  <input class="me-1 p-2 col-auto" type="date" id="appt" name="f_horario0" required />
+                  <label for="appt" class="text-nowrap bd-highlight">Data Final:</label>
+                  <input class="me-1 p-2 col-auto" type="date" id="appt" name="s_horario0" required />
+                  <label for="appt">Rendimento:</label>
+                  <div class="input-group d-flex flex align-items-center" style="width: 150px">
+                     <input type="number" step="any" name="prioridade" class="form-control" id="prioridade"
+                        aria-label="prioridade" />
+                     <span class="input-group-text" id="basic-addon0">% a.a</span>
+                  </div>
+                  <button type="button" onclick="removerCampo(0)" class="ms-1 btn btn-secondary btn-block">
+                     -
+                  </button>
+               </div>
+            </div>
+            <button type="button" onclick="adicionarCampo()" class="mt-4 btn btn-secondary btn-block">
+               Nova tarefa+
+            </button>
+            <button type="submit" class="mt-4 btn btn-dark btn-block">
+               Submeter tarefas
+            </button>
+         </form>
        </div>
     </div>
  </div>
+ 
+ <script>
+
+   var controleCampo = 1;
+   function adicionarCampo() {
+           controleCampo++;
+           document
+               .getElementById("formInsert")
+               .insertAdjacentHTML(
+                   "beforeend", `
+                           <div id="formulario${controleCampo}" class="dataForm d-flex flex align-items-center justify-content-center mt-2">
+                           <label for="inputTarefa">LCI/LCA: </label>
+                           <input type="text" class="form-control me-1 w-25 col-auto" name="nome${controleCampo}" id="inputTarefa"
+                              placeholder="LCI DI 1080" required />
+                           <label for="appt" class="text-nowrap bd-highlight">Data Inicial:</label>
+                           <input class="me-1 p-2 col-auto" type="date" id="appt" name="f_horario${controleCampo}" required />
+                           <label for="appt" class="text-nowrap bd-highlight">Data Final:</label>
+                           <input class="me-1 p-2 col-auto" type="date" id="appt" name="s_horario${controleCampo}" required />
+                           <label for="appt">Rendimento:</label>
+                           <div class="input-group d-flex flex align-items-center" style="width: 150px">
+                              <input type="number" step="any" name="prioridade${controleCampo}" class="form-control" id="prioridade${controleCampo}"
+                                 aria-label="prioridade" />
+                              <span class="input-group-text" id="basic-addon${controleCampo}">% a.a</span>
+                           </div>
+                           <button type="button" onclick="removerCampo(${controleCampo})" class="ms-1 btn btn-secondary btn-block">
+                           -
+                           </button>
+                           </div>
+                   
+                   `
+               );
+       }
    
+      function removerCampo(idCampo) {
+         if (idCampo != 0){
+            document.getElementById("formulario"+idCampo).remove();
+         }
+         else {
+            document.getElementById("formulario").remove();
+         }
+      }
+   </script> 

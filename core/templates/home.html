@@ -12,7 +12,7 @@
    <div class="row gx-5">
       <div class="col">
          <div class="p-3 border bg-light">
-            <form method="POST" action="" class="card">
+            <form method="POST" action="{% url 'lis_view' %}" class="card">
                {% csrf_token %}
                <h5 class="card-title text-center">Maior Subsequência Crescente</h5>
                <div class="form-group mt-4">
@@ -31,7 +31,7 @@
    <div class="row gx-5">
       <div class="col mt-4">
          <div class="p-3 border bg-light">
-               <form class="card application" method="POST" action="{% url 'lis_view' %}">
+               <form class="card application" method="POST" action="{% url 'wis_view' %}">
                   <h5 class="card-title text-center mb-3">Melhores Aplicações</h5>
                   {% csrf_token %}
                   <div id="formInsert">
