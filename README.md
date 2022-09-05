@@ -79,8 +79,6 @@ http://127.0.0.1:8000/
 2. Clique em Nova Tarefa+ para adicionar mais um campo para cadastro de outra aplicação.
 3. Após todas as aplicações cadastradas utilize o botão Submeter tarefas para ver quais aplicações podem ser mais úteis.
 
-## Outros
-
 ## Apresentação
 
 [Video Apresentação](apresentacao/video_PD_LIS_and_Interval.mp4)
