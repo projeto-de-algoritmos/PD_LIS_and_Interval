@@ -18,8 +18,11 @@
                <div class="form-group mt-4">
                   <label for="exampleInputEmail1">Digite uma sequência de números qualquer separadas por
                      vírgula:</label>
-                  <input name="lis" class="mt-4 pt-2 form-control form-control-sm"
-                     placeholder="Enter sua sequência 1,2,3,4,5,6,7" />
+                  {% if result %}   
+                  <input value="A maior subsequência encontrada foi: {{ result }}" name="lis" class="text-danger mt-4 pt-2  form-control form-control-sm" placeholder="Enter sua sequência 1,2,3,4,5,6,7">
+                  {% else %}
+                  <input name="lis" class="mt-4 pt-2  form-control form-control-sm" placeholder="Enter sua sequência 1,2,3,4,5,6,7">
+                  {% endif %}
                </div>
                <button type="submit" class="mt-4 btn btn-dark btn-block">
                   Ver maior subsequência crescente

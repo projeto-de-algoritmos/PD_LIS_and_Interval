@@ -27,7 +27,7 @@ def LIS(request):
         messages.info(request, '')
         return HttpResponseRedirect('/')  
     
-    return render(request, 'modalLIS.html',{'result':longest_sequence})
+    return render(request, 'home.html',{'result':longest_sequence})
     
 def WIS(request):
     
