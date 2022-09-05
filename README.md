@@ -1,7 +1,7 @@
 # LIS and Interval
 
 **Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+
 
 ## Alunos
 |Matrícula | Aluno |
