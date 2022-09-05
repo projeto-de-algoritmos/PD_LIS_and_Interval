@@ -16,11 +16,11 @@ Temas:
 | 19/0044390  |  Victor Rayan Adriano Ferreira |
 
 ## Sobre 
-O nosso trabalho implementa dois algoritmos de programação dinâmica, Maior Subsequência Crescente e o Weighted Interval Scheduling (WIS), o objetivo da maior subsequência crescente é encontrar em um conjunto de números dado, o maior conjunto em ordem crescente. Já o objetivo do Weighted Inteval Scheduling é encontrar tarefas com maior prioridade e priorizar o maior número de tarefas, para isso esses dois algoritmos utilizam um tipo de memorização, senão se tornariam a algo muito parecido como força bruta. 
+O nosso trabalho implementa dois algoritmos de programação dinâmica, Maior Subsequência Crescente(LIS) e o Weighted Interval Scheduling (WIS). O objetivo do LIS é dada uma sequência encontrar a subsequência que seja a maior possível. Já o objetivo do Weighted Inteval Scheduling é encontrar tarefas com maior prioridade e priorizar o maior número de tarefas, para isso esses dois algoritmos utilizam um tipo de memorização, senão se tornariam a algo muito parecido como força bruta. 
 
 No caso do WIS, enxergamos a possibilidade de utilização na priorização de LCI's/LCA's (Letra de Crédito Imobiliário/ Letra de Crédito do Agronegócio), pois elas são tipos de investimestimento com um prazo para início da aplicação e liquidez apenas no vencimento e um rendimento (prioridade), ou seja, ao investirmos em LCI's/LCA's buscamos alocar os recursos financeiros no maior número de LCI's/LCA's e com o maior retorno, o que a nossa aplicação se compromete a fazer, já que um grande problema ao se procurar rendas fixas desse tipo é a diversidade de aplicações em diversos bancos e com diferentes rendimentos.
 
-Portanto por exemplo um insider com um bom direcionamento sobre o futuro dos retornos dos rendimentos das LCI's/LCA's pode se antecipar buscando alocar os seus recursos naquelas que tenham o melhor retorno.
+Portanto, por exemplo um insider com um bom direcionamento sobre o futuro dos retornos dos rendimentos das LCI's/LCA's pode se antecipar buscando alocar os seus recursos naquelas que tenham o melhor retorno.
 
 ## Screenshots
 Tela inicial da aplicação:
@@ -83,4 +83,5 @@ http://127.0.0.1:8000/
 
 ## Apresentação
 
+[Video Apresentação](apresentacao/video_PD_LIS_and_Interval.mp4)
 
